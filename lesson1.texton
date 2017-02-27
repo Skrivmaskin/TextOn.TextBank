@@ -1,0 +1,65 @@
+// in this simple example we introduce seq,
+//choice and func.
+
+
+// A @func is something that can output text.
+// You can generate the text by hitting alt+enter
+// when you coursor is inside the func
+// Try hitting alt+enter inside this func:
+@func @helloWorld
+{
+    Hello, world
+}
+
+// You can call
+// other functions from within other functions:
+@func @mySecondFunction
+{
+  I wonder if I can call the first function:
+  @helloWorld
+}
+// Try hitting alt + enter to
+// see what it looks like!
+
+
+// We have two basic commands to organize text:
+// @seq {....} and @choice { ... }.
+// Everything inside the {...} in a sequence will
+// be part of the output.
+// Inside a choice, the generator picks one
+// row at random.
+@func @testSeqAndChoice
+{
+  @choice{
+    First sentence.
+    Second sentence.
+    Third sentence.
+  }
+  // break creates a new line
+  @break
+  @seq {
+    This one will def get picked.
+    As will this one!
+    And this one!!!
+  }
+}
+
+// You can nest seq and choice.
+// And even call functions inside them.
+@func @nestedSeqAndChoice
+{
+  @choice {
+    @seq {
+      This first sequence is picked sometimes.
+      But not always.
+    }
+    @seq {
+      Sometimes it is this one that is picked instead.
+    }
+    @seq {
+      This time we got lucky and picked the function:
+      @break 
+      @testSeqAndChoice
+  }
+
+}

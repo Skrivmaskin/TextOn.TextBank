@@ -1,0 +1,46 @@
+// We introduce variables (or text replacements)
+
+// A variable is a way to avoid having to write the
+// same thing over and over again.
+@var $nameOfVar = "Description of variable"
+{
+  "First possible value of nameOfVar"
+  "Second possible valua of nameOfVar"
+  "Third one"
+}
+
+// You can place variables inside the text you write,
+// for instance in a function (see Lesson1).
+// Hit alt+enter inside this function to what
+// happens. Note that you can change the value
+// of nameOfVar to any of the three options.
+@func @tryMyVar
+{
+  In this function I'll call my var:
+  This is the value we picked: $nameOfVar.
+}
+
+
+// You can link the value of a
+// variable to the value of a previously
+// defined variable:
+@var $Country = "Where do you live?"
+{
+  "U.K"
+  "Sweden"
+  "Germany"
+}
+
+@var $City = "Which city do you live in?"
+{
+  "London" [$Country = "U.K"]
+  "Stockholm" [$Country = "Sweden"]
+  "Berlin" [$Country = "Germany"]
+  "Frankfurt" [$Country = "Germany"]
+}
+
+@func @tryWhereILive
+{
+  The city you live in is: $City.
+  And the country you live in is: $Country.
+}
