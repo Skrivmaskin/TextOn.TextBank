@@ -1,0 +1,53 @@
+// More on variables and random words
+@var $pet = "Which pet do you have?"
+{
+  "dog"
+  "cat"
+  "turtle"
+  "mouse"
+}
+
+// There are many ways to restrict the
+// values of a variable -
+@var $petFood = "What does you pet eat?"
+{
+  // only the cat eats liver
+  "liver" [$pet = "cat"]
+  // both the dog and the turle eat meat
+  "meat" [$pet = "dog" || $pet = "turtle"]
+  // every animal except the mouse eats cat food
+  "cat food " [$pet <> "mouse"]
+  // we give the mouse something to eat
+  "cheese" [$pet = "mouse"]
+  //finally something for anyone
+  "bread"
+}
+
+// A variable can depend on
+// the value of several other variables
+@var $lifeExpectancy = "How long will the pet live?"
+{
+  // a mouse only lives for a year
+  "one year" [$pet = "mouse"]
+  // a pet that is not a mouse can live for two
+  "two years" [$pet <> "mouse"]
+  // meat eaters can live for longer
+  "five years" [$petFood = "meat"]
+  // A turtle on a meat diet can live for a long time
+  "ten years" [$pet = "turtle" && $petFood = "meat"]
+}
+
+// Hit alt+enter and have a play
+// with the variable boxes
+// Note on the last line how one can use
+// {} to instert some simple variation into the text.
+// Hit the generate button multiple times and watch
+// how the color changes value.
+@func @petStuff
+{
+  I went to the pet store and bought a $pet.
+  They told me it needs to eat plenty of $petFood.
+  Given the race of the pet and its diet, you can
+  expect that it will live for roughly $lifeExpectancy. 
+  The $pet had a strange color; it was {brown|yellow|red|orange}.
+}
