@@ -58,8 +58,8 @@
     }
     @seq {
       This time we got lucky and picked the function:
-      @break 
+      @break
       @testSeqAndChoice
+    }
   }
-
 }
