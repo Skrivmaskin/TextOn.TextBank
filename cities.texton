@@ -1,0 +1,14 @@
+#include "countries.texton"
+
+@var $City = "Which city are you writing about?"
+  {
+    "London" [$Country = "U.K."]
+    "Berlin" [$Country = "Germany"]
+    "Paris" [$Country = "France"]
+    "Birmingham" [$Country = "U.K." || $Country = "U.S.A."]
+    "New York" [$Country = "U.S.A."]
+    "York" [$Country = "U.K."]
+    "Cardiff" [$Country = "U.K."]
+    "Tokyo" [$Country = "Japan"]
+    "Lyon" [$Country = "France"]
+  }
