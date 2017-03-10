@@ -1,6 +1,6 @@
 #include "countries.texton"
 
-@var $City = "Which city are you writing about?"
+@var @free $City = "Which city are you writing about?"
   {
     "London" [$Country = "U.K."]
     "Berlin" [$Country = "Germany"]

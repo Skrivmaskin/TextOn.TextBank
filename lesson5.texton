@@ -1,1 +1,14 @@
-// Including multiple files 
+// It is a good idea to try and keep the files short and with a
+// well defined purpose. This has many benefits. As well as
+// making it easy to see what has been written without scrolling
+// up and down, you can re-use old stuff you have written more
+// easily.
+// You can include the content of another file by writing
+#include "countries.texton"
+// If you open this file you will see it contains only one variable,
+// with a long list of country names which you can now use in your text.
+
+@func @TestCountry
+{
+  I see, so do you like living in $Country?
+}

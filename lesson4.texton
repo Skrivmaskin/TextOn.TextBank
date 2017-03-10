@@ -1,1 +1,53 @@
-// Attributes (a.k.a. the Captains.)
+// Attributes are meant to control certain aspects of the text:
+// are you writing to a man or a woman? A family or a teenager?
+// etc. That are differnt from variables in their values
+// are only used to control e.g. which choices that can get picked.
+// They cannot be de-referenced like a variable.
+
+@att %Gender = "What is the gender of the person you write to?"
+  {
+    "Male"
+    "Female"
+  }
+
+@att %Mood = "What the mood of the person come Sundays?"
+{
+  "Relaxed"
+  "Angry"
+}
+
+
+@func @TestAttributes
+{
+  Finally week-end! You getting ready to
+  // Here the choice will be restricted by the gender
+  @choice {
+    stretch out on the sofa with a beer. [%Gender = "Male"]
+    watch the game you recorded from earlier in the week. [%Gender = "Male"]
+    have a long hot bath. [%Gender = "Female"]
+    have a glas of red wine while listening watching that rom-com with Hugh Grant. [%Gender = "Female"]
+  }
+
+  // Attributes can also be used to select whole seq's
+  On Saturday you are looking forward to spending time with your friends.
+  @seq {
+    You are planning to play some rugby and throw some sausage on the barabcue.
+  } [%Gender = "Male"]
+  @seq {
+    Go shopping and have a facial at Macys.
+  } [%Gender = "Female"]
+
+  Sunday is the final day of the week. The ultimate day of rest.
+  @seq{
+    You tend to kick back, watch something on the telly and perhaps have a long phone conversation with
+    mum [%Gender = "Female"]
+    dad [%Gender = "Male"]
+    .
+  } [%Mood = "Relaxed"]
+  @seq {
+    Well, it would be if it weren't for those freaking kids next door making all that noise! If you hear them again, you are seriously considering
+    giving them an ass-kicking. They deserve it! [%Gender = "Male"]
+    talking to their parents. It's about time! [%Gender = "Female"]
+  }[%Mood = "Angry"]
+
+}

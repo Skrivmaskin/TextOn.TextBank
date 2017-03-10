@@ -4,8 +4,9 @@
 // same thing over and over again.
 @var $nameOfVar = "Description of variable"
 {
+  "Delete this text to see other options"
   "First possible value of nameOfVar"
-  "Second possible valua of nameOfVar"
+  "Second possible value of nameOfVar"
   "Third one"
 }
 
@@ -40,8 +41,17 @@
   "Frankfurt" [$Country = "Germany"]
 }
 
+// You can declare that a variable is free.
+// That means you get to choose a variable value
+// either from the list, or just type whatever you like.
+@var @free $Name = "What is you name?"
+{
+  "Jonas"
+}
+
 @func @tryWhereILive
 {
   The city you live in is: $City.
   And the country you live in is: $Country.
+  I also know you name, it is: $Name.
 }
