@@ -1,0 +1,8 @@
+@var @free $Country = "What country?"
+  {
+    "U.K."
+    "Germany"
+    "France"
+    "U.S.A."
+    "Japan"
+  }
