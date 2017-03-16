@@ -48,6 +48,6 @@
   I went to the pet store and bought a $pet.
   They told me it needs to eat plenty of $petFood.
   Given the race of the pet and its diet, you can
-  expect that it will live for roughly $lifeExpectancy. 
+  expect that it will live for roughly $lifeExpectancy.
   The $pet had a strange color; it was {brown|yellow|red|orange}.
 }

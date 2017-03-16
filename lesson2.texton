@@ -4,7 +4,6 @@
 // same thing over and over again.
 @var $nameOfVar = "Description of variable"
 {
-  "Delete this text to see other options"
   "First possible value of nameOfVar"
   "Second possible value of nameOfVar"
   "Third one"
