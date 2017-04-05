@@ -1,0 +1,45 @@
+// In this lesson we build on the text we wrote
+// in lesson6.
+// We begin by importing the file into that file,
+// so that we don't need to re-write everything.
+#include "lesson6.texton"
+
+// Clearly we have a sad and a happy narrative going on.
+// In MyBook1, we let chance decide which one we pick.
+// We can control this using an attribute instead.(see Lesson 4)
+
+@att %Mood = "Are we having a bad day or a good day?"
+{
+  "Happy"
+  "Sad"
+}
+
+// We can use this to extend on the trip:
+@func @TripToMyExExtended
+{
+  I made my way to the busstop.
+  @choice{
+    It almost felt like I was flying. [%Mood = "Happy"]
+    My head-ache almost made me pass out. [%Mood = "Sad"]
+  }
+  Felt familiar yet strange to get on no. 7 when it arrived.
+  30 minutes later I got off, walked the 100 meters to her building.
+  I entered her appartment number into the intercom.
+  @break
+  "Hello?"
+  @choice {
+    It sounded like an angel had spoken. [%Mood = "Happy"]
+    Her high pitch voice almost pierced my skull. [%Mood = "Sad"]
+  }
+}
+
+// MyBook now needs a re-write, as we must make sure that
+// we always get the happy introduction when the mood is happy:
+@func @MyBook2 {
+  @choice{
+    @HappyIntroduction [%Mood = "Happy"]
+    @SadIntroduction [%Mood = "Sad"]
+  }
+  @break
+  @TripToMyExExtended
+}

@@ -1,0 +1,63 @@
+// The structure of TextOn makes it really easy
+// to combine smaller building blocks into more
+// more complex structures.
+// On the lowest level you can use choice and seq
+// to combine sentences.
+
+@func @HappyIntroduction
+{
+  @choice {
+    The most amazing thing happened when I woke up this morning.
+    As I was getting out of bed, something incredible happned.
+  }
+  As I was brushing my teeth, I looked down into my sink and found my long lost wedding ring.
+  @choice {
+    I had not seen the ring since the party last month.
+    It had been almost a month since I last saw the ring.
+  }
+  It was at that moment that I decided to not take no for an answer, find my true love and propose again!
+}
+
+@func @SadIntroduction
+{
+  @choice {
+    I woke up feeling sick from all the drinking the night before.
+    Oh my God, I need to throw up! Was the first thing that crossed my mind when I woke up.
+  }
+  @seq{
+        I rushed out of bed and dived into the bathroom in search of the toilet.
+        Time to throw up.
+      }
+  @choice {
+    As bent down over toilet I saw the ring.
+    I was just about to return the midnight snack when I spotted the ring.
+  }
+  Just seeing the damn thing made me feel even worse, something I had not thought possible.
+  Every night since my proposal got turned down, I had spend drinking, trying to forget.
+  It was at that moment that I decided to spit reason in the face, and propose one more time.
+}
+
+
+
+@func @TripToMyEx
+{
+  I made my way to the busstop.
+  Felt familiar yet strange to get on no. 7 when it arrived.
+  30 minutes later I got off, walked the 100 meters to her building.
+  I entered her appartment number into the intercom.
+  @break
+  "Hello?"
+}
+
+// Both the happy and the sad introduction work together with
+// TripToMyEx, here is how you could combine them:
+
+@func @MyBook1
+{
+  @choice {
+    @HappyIntroduction
+    @SadIntroduction
+  }
+  @break
+  @TripToMyEx
+}
