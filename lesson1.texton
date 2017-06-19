@@ -1,7 +1,6 @@
 // in this simple example we introduce seq,
 //choice and func.
 
-
 // A @func is something that can output text.
 // You can generate the text by hitting alt+enter
 // when you coursor is inside the func
@@ -18,6 +17,8 @@
   I wonder if I can call the first function:
   @helloWorld
 }
+
+
 // Try hitting alt + enter to
 // see what it looks like!
 

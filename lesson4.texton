@@ -19,13 +19,13 @@
 
 @func @TestAttributes
 {
-  Finally week-end! You getting ready to
+  Finally week-end!
   // Here the choice will be restricted by the gender
   @choice {
-    stretch out on the sofa with a beer. [%Gender = "Male"]
-    watch the game you recorded from earlier in the week. [%Gender = "Male"]
-    have a long hot bath. [%Gender = "Female"]
-    have a glas of red wine while listening watching that rom-com with Hugh Grant. [%Gender = "Female"]
+    You getting ready to stretch out on the sofa with a beer. [%Gender = "Male"]
+    You getting ready to watch the game you recorded from earlier in the week. [%Gender = "Male"]
+    You getting ready to have a long hot bath. [%Gender = "Female"]
+    You getting ready to have a glas of red wine while listening watching that rom-com with Hugh Grant. [%Gender = "Female"]
   }
 
   // Attributes can also be used to select whole seq's
@@ -39,15 +39,15 @@
 
   Sunday is the final day of the week. The ultimate day of rest.
   @seq{
-    You tend to kick back, watch something on the telly and perhaps have a long phone conversation with
-    mum [%Gender = "Female"]
-    dad [%Gender = "Male"]
-    .
+    You tend to kick back, watch something on the telly and perhaps have a long phone conversation with mum. [%Gender = "Female"]
+    You tend to kick back, watch something on the telly and perhaps have a long phone conversation with dad. [%Gender = "Male"]
   } [%Mood = "Relaxed"]
   @seq {
-    Well, it would be if it weren't for those freaking kids next door making all that noise! If you hear them again, you are seriously considering
-    giving them an ass-kicking. They deserve it! [%Gender = "Male"]
-    talking to their parents. It's about time! [%Gender = "Female"]
+    Well, it would be if it weren't for those freaking kids next door making all that noise!
+    If you hear them again, you are seriously considering giving them an ass-kicking. [%Gender = "Male"]
+    They deserve it! [%Gender = "Male"]
+    If you hear them again, you are seriously considering talking to their parents. [%Gender = "Female"]
+    It's about time! [%Gender = "Female"]
   }[%Mood = "Angry"]
 
 }
