@@ -1,0 +1,11 @@
+#include "Deklarationer.texton"
+
+
+@func @Vinkel
+{
+  @choice
+    {
+      Resan till $DESTINATION är extra vacker så här års. Under den $RESTID långa resan får du chansen att njuta av en stunds avkoppling innan det är dags att gå i land. [%Målgrupp = "Pensionär"]
+      Att resa kan kännas som ett stort äventyr, särskilt för de små. Under resan till $DESTINATION, som tar $RESTID, har ni gott om tid att utforska livet ombord. [%Målgrupp = "Familj"]
+    }
+}

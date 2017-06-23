@@ -1,0 +1,16 @@
+#include "Deklarationer.texton"
+#include "Inledning.texton"
+#include "Vinkel.texton"
+#include "Fordel.texton"
+
+
+
+@func @Main
+{
+  @seq
+    {
+      @InledningEnkel
+      @Vinkel
+      @Fordel
+    }
+}

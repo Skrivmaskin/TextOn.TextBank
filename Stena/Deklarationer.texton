@@ -1,0 +1,38 @@
+@att %Målgrupp = "Vem är det som reser?"
+{
+  "Pensionär"
+  "Familj"
+}
+
+
+@att %Tyngdpunkt = "Vad vill du trycka på?"
+{
+  "Personal"
+  "Servering"
+  "Shopping"
+}
+
+
+@var $DESTINATION = "Vart reser personen?"
+{
+  "Belgien"
+	"Holland"
+	"Irland"
+	"Tyskland"
+	"Danmark"
+}
+
+@var $RESTID = "Hur lång tid tar resan?"
+{
+  "1 timme"
+	"4 timmar"
+	"8 timmar"
+}
+
+@var $SÄSONG = "När sker resan?"
+{
+  "Sommar"
+	"Vinter"
+	"Vår"
+	"Höst"
+}

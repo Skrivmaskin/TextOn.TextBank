@@ -1,0 +1,12 @@
+#include "Deklarationer.texton"
+
+
+@func @InledningEnkel
+{
+  Hej!
+  @choice
+    {
+      Stort tack för att väljer att resa med oss på Stena Line. [%Målgrupp = "Pensionär"]
+      Varmt välkommen ombord på Stena Line. På våra färjelinjer kan hela familjen känna sig som hemma. [%Målgrupp = "Familj"]
+    }
+}

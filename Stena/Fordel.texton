@@ -1,0 +1,41 @@
+#include "Deklarationer.texton"
+
+
+@func @private @FordelPersonal
+{
+  @choice
+    {
+      Vår vänliga personal på plats månar givetvis om dig och din trivsel. [%Målgrupp = "Pensionär"]
+      Våra medarbetare ser till att ni får ut det mesta av er resa och att även familjens minsta medlemmar trivs ombord. [%Målgrupp = "Familj"]
+    }
+}
+
+
+@func @private @FordelServering
+{
+  @choice
+    {
+      I vår servering kan du njuta av en stunds avkoppling. Varför inte inleda resan med något gott från restaurangen? [%Målgrupp = "Pensionär"]
+      När det är dags att fylla på med ny energi är ni välkomna till vår servering där du givetsvis hittar en barnvänlig meny med många godsaker. [%Målgrupp = "Familj"]
+    }
+}
+
+@func @private @FordelShopping
+{
+  @choice
+    {
+      Så här under $SÄSONG har vi dessutom många förmånliga erbjudanden så göra gärna ett besök i vår Taxfree shop [%Målgrupp = "Pensionär"]
+      När det är dags att fylla på med ny energi är ni välkomna till vår servering där du givetsvis hittar en barnvänlig meny med många godsaker. [%Målgrupp = "Familj"]
+    }
+}
+
+
+@func @Fordel
+{
+  @choice
+    {
+      @FordelPersonal [%Tyngdpunkt = "Personal"]
+      @FordelServering [%Tyngdpunkt = "Servering"]
+      @FordelShopping [%Tyngdpunkt = "Shopping"]
+    }
+}
